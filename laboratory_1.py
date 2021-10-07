@@ -11,7 +11,7 @@ def check_speed(function, r, N):
 	"""
     logs = []
 
-    for n in range(1, N + 1, 1):
+    for n in range(1, N + 1, 1):  
         t = 0
         for j in range(r):
             array = list(np.random.random((n)))
@@ -25,7 +25,7 @@ def check_speed(function, r, N):
         logs.append(t / r)
     return logs
 
-def check_speed_matrix(function, r, N):  
+def check_speed_matrix(function, r, N):
 	"""
 	These code gives some function with array1 and array2 input and measures time complexity of it with N max
 	iterations and averaging by r - repeats
