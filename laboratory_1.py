@@ -71,12 +71,17 @@ logs_3 = check_speed(sum_function, 10, 2000)
 
 
 # measaring time complexity for TASK#4 P(1.0)
+def pow(a, n):
+  r = 1
+  for i in range(n):
+    r = r * a
+  return r
+
 def get_p(array):
   s = 0
   for i in range(len(array)):
-      s = s + (array[i] * math.pow(1.5, i))
-logs_4 = check_speed(get_p, 10, 1700)
-
+      s = s + (array[i] * pow(1.5, i))
+logs_4 = check_speed(get_p, 5, 1000)
 
 # measaring time complexity for TASK#5 Bubble sorting
 def bubble(array):
