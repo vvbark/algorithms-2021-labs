@@ -213,7 +213,11 @@ def timSort(arr):
 logs_7 = np.array(check_speed(timSort, 5, 2000))
 
 
-# measaring time complexity for TASK#7 Matrices multiplying
-def matmul(a, b):
-    a @ b
+# measaring time complexity for TASK#8 Matrices multiplying
+def matmult(a,b):
+    zip_b = zip(*b)
+    # uncomment next line if python 3 : 
+    zip_b = list(zip_b)
+    return [[sum(ele_a*ele_b for ele_a, ele_b in zip(row_a, col_b)) 
+             for col_b in zip_b] for row_a in a]
 logs_8 = check_speed_matrix(matmult, 5, 1000)
